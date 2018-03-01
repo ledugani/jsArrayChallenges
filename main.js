@@ -34,9 +34,9 @@ console.log(shrimpScore);
 //return which word scores higher
 var answer;
 if (shrimpScore >= jumboScore) {
-    answer = shrimp.join('') + "=" + shrimpScore;
+    answer = shrimp.join('') + " = " + shrimpScore;
 } else {
-    answer = jumbo.join('') + "=" + jumboScore;
+    answer = jumbo.join('') + " = " + jumboScore;
 }
 console.log(answer);
 
