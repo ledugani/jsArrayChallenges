@@ -32,8 +32,14 @@ for (var j=0; j < shrimp.length; j++) {
 console.log(shrimpScore);
 
 //return which word scores higher
-if (shrimpScore > jumboScore) {
-    console.log(shrimp.join(''));
+var answer;
+if (shrimpScore >= jumboScore) {
+    answer = shrimp.join('') + "=" + shrimpScore;
 } else {
-    console.log(jumbo.join(''));
+    answer = jumbo.join('') + "=" + jumboScore;
 }
+console.log(answer);
+
+//push to html
+var challenge1 = document.getElementById(challengeUno);
+challengeUno.innerHTML = "<h3>" + answer + "</h3>";
