@@ -43,3 +43,26 @@ console.log(answer);
 //push to html
 var challenge1 = document.getElementById(challengeUno);
 challengeUno.innerHTML = "<h3>" + answer + "</h3>";
+
+/*--- Challenge #2 ---*/
+
+var challengeTwoInputA = [1,2,3,4,5,6,7,8,9];  //[1,2,7,4,5,6,3,8,9];
+var challengeTwoInputB = [12,13,14];  //[12,17,14];
+var challengeTwoInputC = [9,2,4,7,3];  //[9,2,4,3,7];
+
+//create function to replace the numbers
+function replaceNumbaz(num) {
+        //replace 3's with 7's
+        var index = num.indexOf(3);
+        if (index > -1) {
+            num.splice(index, 1, 7);
+        }
+
+        //replace 7's with 3's
+        var index = num.lastIndexOf(7);
+        if (index > -1) {
+            num.splice(index, 1, 3);
+        }
+}
+
+replaceNumbaz(challengeTwoInputA);
