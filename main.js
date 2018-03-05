@@ -38,6 +38,7 @@ if (shrimpScore >= jumboScore) {
 var challenge1 = document.getElementById(challengeUno);
 challengeUno.innerHTML = "<h3> Challenge 1: " + answer + "</h3>";
 
+
 /*--- Challenge #2 ---*/
 
 var challengeTwoInputA = [1,2,3,4,5,6,7,8,9];  //[1,2,7,4,5,6,3,8,9];
@@ -63,3 +64,24 @@ replaceNumbaz(challengeTwoInputA);
 
 var challenge2 = document.getElementById(challengeDos);
 challengeDos.innerHTML = "<h3> Challenge 2: " + challengeTwoInputA + "</h3>";
+
+
+/*--- Challenge #3 ---*/
+
+var challengeThreeInputA = [ 1, 1, 1, 2, 1, 1 ];  // 2
+var challengeThreeInputB = [ 0, 0, 0, 0, 0, 0, 0, 0.55, 0, 0 ];  // 0.55
+
+function checkForDups(dupes) {
+    var duplicates = [];
+    var unique = [];
+    for (var i = 0; i < dupes.length; i++) {
+        if ( dupes[i] == dupes[i+1] || dupes[i] == dupes[i-1]) {
+            duplicates.push(dupes[i])
+        } else {
+            unique.push(dupes[i])
+        }
+    }
+    return unique;
+}
+
+console.log(checkForDups(challengeThreeInputA));
