@@ -1,6 +1,10 @@
 console.log();
 
-/*--- Challenge #1 ---*/
+function writeToDom(input, challengeNum, id) {
+    document.getElementById(id).innerHTML += "<h3>" + challengeNum + input + "</h3>";
+}
+
+/*------------------------------------------- Challenge #1 -------------------------------------------*/
 var challengeOneInput = "jumbo shrimp";
 
 //split each word
@@ -39,7 +43,7 @@ var challenge1 = document.getElementById(challengeUno);
 challengeUno.innerHTML = "<h3> Challenge 1: " + answer + "</h3>";
 
 
-/*--- Challenge #2 ---*/
+// /*------------------------------------------- Challenge #2 -------------------------------------------*/
 
 var challengeTwoInputA = [1,2,3,4,5,6,7,8,9];  //[1,2,7,4,5,6,3,8,9];
 var challengeTwoInputB = [12,13,14];  //[12,17,14];
@@ -66,7 +70,7 @@ var challenge2 = document.getElementById(challengeDos);
 challengeDos.innerHTML = "<h3> Challenge 2: " + challengeTwoInputA + "</h3>";
 
 
-/*--- Challenge #3 ---*/
+/*------------------------------------------- Challenge #3 -------------------------------------------*/
 
 var challengeThreeInputA = [ 1, 1, 1, 2, 1, 1 ];  // 2
 var challengeThreeInputB = [ 0, 0, 0, 0, 0, 0, 0, 0.55, 0, 0 ];  // 0.55
@@ -90,7 +94,7 @@ var challenge2 = document.getElementById(challengeTres);
 challengeTres.innerHTML = "<h3> Challenge 3: " + challengeThreeInputA + "</h3>";
 
 
-/*--- Challenge #4 ---*/
+/*------------------------------------------- Challenge #4 -----------------------------------------*/
 
 var challengeFourInputA = [ 1, 2, 3 ];  // [2, 4, 6]
 var challengeFourInputB = [ 3, 8, 1, 2, 4, 12 ];  // [ 6, 16, 2, 4, 8, 24 ]
@@ -105,3 +109,28 @@ function doubleNum(dubnum) {
 
 var doubledArray = doubleNum(challengeFourInputB);
 document.getElementById('challengeQuatro').innerHTML = "<h3> Challenge 4: " + doubledArray + "</h3>";
+
+
+/*------------------------------------------- Challenge #5 ----------------------------------------*/
+
+var array1 = [1,2];
+var array2 = [1];
+//display = [2]
+
+function actuallyRemoveThem(a, b) {
+    for (var x = 0; x < a.length; x++) {
+        for (var y = 0; y < b.length; y++) {
+            if (a[x] === b[y]) {
+            a.splice(x, 1);
+            }
+        }
+    }
+    return a;
+}
+
+var answerr = actuallyRemoveThem(array1, array2);
+writeToDom(answerr, "Challenge 5: ", "challengeCinco");
+
+var array1 = [1,2, 4, 7, 5, 9];
+var array2 = [5, 9, 2];
+//display = [1, 4, 7]
